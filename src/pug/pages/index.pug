@@ -1,0 +1,214 @@
+extends ../layout.pug
+
+block header
+    include ../components/nav.pug
+    header 
+        .content
+            h1 Stanley Orabueze is a 
+                span front-end 
+                |and 
+                wbr 
+                span back-end developer 
+            p He crafts responsive websites where technologies meet creativity
+            button.btn-primary Contact me!!
+        figure 
+            img(src="./assets/images/Image.png", alt="profile")
+            .status 
+                div 
+                div 
+                    p 
+                        span Currently working on 
+                        | Portfolio
+            div.dots 
+                each i in [1,2,3,4,5]
+                    div 
+                        include ../../../dist/assets/images/Ellipse 19.svg
+                        include ../../../dist/assets/images/Ellipse 19.svg
+                        include ../../../dist/assets/images/Ellipse 19.svg
+                        include ../../../dist/assets/images/Ellipse 19.svg
+                        include ../../../dist/assets/images/Ellipse 19.svg
+
+block main 
+    main 
+        section.projects 
+            .header 
+                div 
+                    h2 
+                        span #
+                        |projects 
+                    include ../../../dist/assets/images/line.svg
+                div 
+                    h5 View all ~~>
+            .projects 
+                section
+                    figure 
+                        img(src="./assets/images/Rectangle 22.jpg", alt="alt")
+                    .technology 
+                        p HTML
+                        p SCSS
+                        p Python
+                        p Flask
+                    article 
+                        h3 ChertNodes
+                        p Minecraft servers hosting 
+                        .action 
+                            button.btn-primary Live <~>
+                            button.btn-secondary Cached >=
+                section
+                    figure 
+                        img(src="./assets/images/Rectangle 22.png", alt="alt")
+                    .technology
+                        p React
+                        p Express
+                        p Discord.js
+                        p Node.js 
+                        p HTML
+                        p SCSS
+                        p Python
+                        p Flask
+                    article 
+                        h3 ProtectX
+                        p Discord anti-crash bot
+                        .action 
+                            button.btn-primary Live <~>
+                            button.btn-secondary Cached >=
+                section
+                    figure 
+                        img(src="./assets/images/Rectangle 22 (1).png", alt="alt")
+                    .technology 
+                        p CSS
+                        p Express
+                        p Node.js
+                    article 
+                        h3 Kahoot Answers Viewer
+                        p Get answers to your kahoot quiz 
+                        .action 
+                            button.btn-primary Live <~>
+                            button.btn-secondary Cached >=
+        section.skill 
+            .header  
+                div 
+                    h2 
+                        span #
+                        |skills 
+                    include ../../../dist/assets/images/line.svg  
+            .skills
+                figure 
+                    div.dots 
+                        each i in [1,2,3,4]
+                            div 
+                                include ../../../dist/assets/images/Ellipse 19.svg
+                                include ../../../dist/assets/images/Ellipse 19.svg
+                                include ../../../dist/assets/images/Ellipse 19.svg
+                                include ../../../dist/assets/images/Ellipse 19.svg
+                                include ../../../dist/assets/images/Ellipse 19.svg
+                    div.dots.center 
+                        each i in [1,2,3,4]
+                            div 
+                                include ../../../dist/assets/images/Ellipse 19.svg
+                                include ../../../dist/assets/images/Ellipse 19.svg
+                                include ../../../dist/assets/images/Ellipse 19.svg
+                                include ../../../dist/assets/images/Ellipse 19.svg
+                                include ../../../dist/assets/images/Ellipse 19.svg
+                    .square.first 
+                    .square.second
+                section 
+                    .skill-card                 
+                        .title 
+                            p Languages
+                        .line 
+                        .data 
+                            p TypeScript
+                            p Lua
+                            p Python
+                            p JavaScript
+                    .skill-card  
+                        .title 
+                            p Databases
+                        .line 
+                        .data 
+                            p SQLite
+                            p PostgreSQL
+                            p Mongo
+                    .skill-card  
+                        .title 
+                            p Tools
+                        .line 
+                        .data 
+                            p VSCode
+                            p Neovim
+                            p Linux
+                            p Figma
+                            p XFCE
+                            p Arch
+                            p Git
+                            p Font Awesome
+                    .skill-card  
+                        .title 
+                            p Other
+                        .line 
+                        .data 
+                            p HTML
+                            p CSS
+                            p EJS
+                            p SCSS
+                            p REST
+                            p Jinja
+                    .skill-card                    
+                        .title 
+                            p Frameworks
+                        .line 
+                        .data 
+                            p React
+                            p Vue
+                            p Disnake
+                            p Discord.js
+                            p Flask
+                            p Express.js     
+        section.about 
+            .header 
+                div 
+                    h2 
+                        span #
+                        |about-me 
+                    include ../../../dist/assets/images/line.svg
+            .about 
+                figure 
+                    img(src="./assets/images/Image2.png", alt="profile")
+                article
+                    p Hello, i’m stanley!
+                        br
+                        br
+                        br
+                        | I’m a self-taught front-end developer based in Kyiv, Ukraine. I can develop responsive websites from scratch and raise them into modern user-friendly web experiences. 
+                        br
+                        br
+                        br
+                        | Transforming my creativity and knowledge into a websites has been my passion for over a year. I have been helping various clients to establish their presence online. I always strive to learn about the newest technologies and frameworks. 
+                    button.btn-primary Read more ->
+        section.contact 
+            .header 
+                div 
+                    h2 
+                        span #
+                        |contacts 
+                    include ../../../dist/assets/images/line.svg
+            .contact
+                p I’m interested in freelance opportunities. However, if you have other request or question, don’t hesitate to contact me 
+                div
+                    p Message me here
+                    .group
+                        include ../../../dist/assets/images/Discord.svg
+                        p !stanley#3519
+                    .group
+                        include ../../../dist/assets/images/Email.svg
+                        p stanley@stanley.me
+
+block footer 
+    include ../components/footer.pug
+
+
+
+
+
+

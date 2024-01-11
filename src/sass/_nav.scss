@@ -1,0 +1,128 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--white, #fff);
+  font-family: "Fira Code", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0px 8px 0px;
+  align-items: flex-end;
+  //   width: 102s4px;
+  > ul {
+    list-style: none;
+    display: flex;
+    li {
+      a {
+        color: $white;
+        font-family: "Fira Code", sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-decoration: none;
+
+        span {
+          color: $primary;
+        }
+      }
+    }
+    li:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+}
+.burger {
+  display: none;
+}
+.media {
+  display: none;
+}
+.media-desktop {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 0;
+  left: 3%;
+
+  svg:not(:first-child) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* CSS for styles applied to devices with 
+a maximum width of 767 pixels or less */
+@media only screen and (max-width: 767px) {
+  /* Your styles go here */
+  nav {
+    display: block;
+    padding: 0;
+    position: relative;
+    height: 100vh;
+    ul {
+      margin-top: 30vh; // 47px
+      margin-left: 16px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+
+      li {
+        a {
+          color: var(--white, #fff);
+          font-family: "Fira Code", sans-serif;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          text-decoration: none;
+          span {
+            color: var(--primary, #c778dd);
+          }
+        }
+      }
+    }
+    > div:first-child {
+      display: flex;
+      //   width: 360px;
+      padding: 16px 16px 8px 16px;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+  .media {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    bottom: 0%;
+  }
+
+  nav.close {
+    height: fit-content;
+    > *:not(:first-child) {
+      display: none;
+    }
+  }
+  .media-desktop {
+    display: none;
+  }
+}

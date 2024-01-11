@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "Fira Code";
+    src: url("../assets/fonts/Fira_Code/static/FiraCode-Bold.ttf");
+}
+
+$font-family: "Fira Code";
+$background: #282c33;
+$white: #fff;
+$primary: #c778dd;
+
+.btn-primary {
+  display: inline-flex;
+  padding: 8px 16px;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid var(--primary, #c778dd);
+  background-color: transparent;
+  cursor: pointer;
+
+
+  color: var(--white, #fff);
+  font-family: "Fira Code", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  &:hover {
+    background: rgba(199, 120, 221, 0.2);
+  }
+}
+
+.btn-secondary {
+  display: inline-flex;
+  padding: 8px 16px;
+  align-items: flex-start;
+  gap: 10px;
+  border: 1px solid var(--gray, #abb2bf);
+  background-color: transparent;
+  cursor: pointer;
+
+  color: var(--gray, #abb2bf);
+  font-family: "Fira Code", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+  &:hover {
+    background: rgba(171, 178, 191, 0.2);
+  }
+}
+section > div.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    > div:first-child {
+      display: flex;
+      // width: 43.8125rem;
+      align-items: center;
+      gap: 1rem;
+
+      h2 {
+        color: var(--white, #fff);
+        font-family: $font-family;
+        font-size: 2rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        span {
+          color: var(--primary, #c778dd);
+        }
+      }
+      svg {
+        width: 100%;
+      }
+    }
+  }
