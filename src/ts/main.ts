@@ -1,19 +1,20 @@
-let burger = document.querySelector(".burger")
-let body = document.body
-let isNavOpen = false
+let burger = document.querySelector(".burger");
+let body = document.body;
+let isNavOpen = false;
+
 burger?.addEventListener("click", () => {
-    let icon = burger.getElementsByTagName("img")
-    let nav = document.querySelector("nav")
+    let icon = burger!.querySelector("img");
+    let nav = document.querySelector("nav");
 
     if (!isNavOpen) {
-        body.style.overflow = "hidden"
-        nav?.className = "open"
-        icon[0].src = "./assets/images/Frame 60 (1).svg"
-        isNavOpen = true
+        body.style.overflow = "hidden";
+        nav?.classList.add("open");
+        icon!.src = "./assets/images/Frame 60 (1).svg";
     } else {
-        body.style.overflow = "scroll"
-        nav?.className = "close"
-        icon[0].src = "./assets/images/Frame 60.svg"
-        isNavOpen = false
+        body.style.overflow = "scroll";
+        nav?.classList.remove("open");
+        icon!.src = "./assets/images/Frame 60.svg";
     }
-})
+
+    isNavOpen = !isNavOpen; // Toggle the state
+});
