@@ -325,7 +325,7 @@ main {
       > figure {
         width: 21.1875rem;
         height: 31.6875rem;
-        flex-shrink: 0;
+        // flex-shrink: 0;
       }
       > article {
         color: var(--gray, #abb2bf);
@@ -447,10 +447,15 @@ a maximum width of 767 pixels or less */
         }
       }
       .projects {
+        display: flex !important;
         flex-direction: column;
         display: inline-flex;
         align-items: center;
         gap: 1rem;
+
+        > button {
+          display: inline-block;
+        }
 
         section {
           width: 20.66119rem;
@@ -480,6 +485,9 @@ a maximum width of 767 pixels or less */
             flex-grow: 1;
           }
         }
+        > figure {
+          width: auto;
+        }
       }
     }
     section.about {
@@ -499,6 +507,7 @@ a maximum width of 767 pixels or less */
           width: 100%;
         }
       }
+      
     }
     section.contact {
       > .contact {
