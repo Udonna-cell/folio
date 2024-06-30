@@ -137,10 +137,11 @@ main {
         flex-direction: column;
         align-items: flex-start;
         border: 1px solid var(--gray, #abb2bf);
+        max-width: 20rem;
 
         > figure {
-          width: 20.66119rem;
-          height: 12.5625rem;
+          width: 100%;
+          height: 100%;
           border-bottom: 1px solid var(--gray, #abb2bf);
           background: url(<path-to-image>), lightgray 50% / cover no-repeat;
 
@@ -397,13 +398,14 @@ a maximum width of 767 pixels or less */
   body {
     padding: 0;
     > *:not(:first-child) {
-      padding: 0 16px;
+      padding: 0 1.5rem;
     }
 
     header {
       flex-wrap: wrap;
       background-size: 104.435px 104.435px;
       background-position: 10% 70%;
+      padding: 0 3rem;
       // margin-top: 2.13rem;
 
       .content {
@@ -458,7 +460,7 @@ a maximum width of 767 pixels or less */
         }
 
         section {
-          width: 20.66119rem;
+          width: fit-content;
         }
       }
     }
@@ -504,7 +506,16 @@ a maximum width of 767 pixels or less */
         align-items: flex-start;
 
         > figure {
-          width: 100%;
+          width: fit-content;
+          height: fit-content;
+          // flex-shrink: 0;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
         }
       }
       

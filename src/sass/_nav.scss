@@ -4,18 +4,22 @@
   gap: 8px;
   color: var(--white, #fff);
   font-family: "Fira Code", sans-serif;
-  font-size: 16px;
+  font-size: calc(16px * 1.4);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+
+  > img {
+    width: calc(16px * 1.4);
+  }
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 32px 0px 8px 0px;
+  align-items: center;  
   align-items: flex-end;
+  padding-top: 4.5rem;
   //   width: 102s4px;
   > ul {
     list-style: none;
@@ -58,6 +62,7 @@ nav {
   svg:not(:first-child) {
     width: 32px;
     height: 32px;
+    cursor: pointer;
   }
 }
 
@@ -67,11 +72,12 @@ a maximum width of 767 pixels or less */
   /* Your styles go here */
   nav {
     display: block;
-    padding: 0;
+    padding-top: 0.2rem;
     position: relative;
     height: 100vh;
+
     ul {
-      margin-top: 30vh; // 47px
+      margin-top: 16vh; // 47px
       margin-left: 16px;
       display: inline-flex;
       flex-direction: column;
@@ -104,6 +110,10 @@ a maximum width of 767 pixels or less */
   .burger {
     display: block;
     cursor: pointer;
+
+    > img {
+      width: calc(1rem * 2);
+    }
   }
   .media {
     display: inline-flex;
@@ -113,7 +123,7 @@ a maximum width of 767 pixels or less */
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
-    bottom: 0%;
+    bottom: 5%;
   }
 
   nav.close {
