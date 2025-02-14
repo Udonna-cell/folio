@@ -3,6 +3,11 @@
 @import "nav";
 @import "footer";
 
+/* Hide scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 body {
   background: $background;
   color: $white;
@@ -314,8 +319,7 @@ main {
       display: flex;
       width: 100%;
       align-items: center;
-      gap: 0rem;
-    
+      gap: 0rem;    
       svg {
         width: 50%;
         // justify-self: flex-start;
@@ -324,12 +328,14 @@ main {
     .about {
       display: flex;
       align-items: center;
+      justify-content: center;
       flex-direction: row-reverse;
       gap: 10rem;
       > figure {
-        width: 21.1875rem;
-        height: 31.6875rem;
+        width: 100%;
+        height: auto;
         // flex-shrink: 0;
+        background: red;
       }
       > article {
         color: var(--gray, #abb2bf);
