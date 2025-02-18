@@ -6,8 +6,10 @@ html(lang="en")
         block style 
             link(rel="stylesheet", href="css/style.css")
     body 
-        block header 
-        block main 
-        block footer 
-        block script 
-            script(src="js/main.js") 
+      include ./components/loader.pug
+      block header 
+      block main 
+      block footer 
+      block script 
+      script(src="js/main.js") 
+      script(src="js/loader.js")
