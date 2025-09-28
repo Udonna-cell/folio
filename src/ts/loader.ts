@@ -1,6 +1,10 @@
-let loaderScreen = document.querySelector("section#load")
-document.body.style.overflow = "hidden"
-setTimeout(() => {
-  loaderScreen.style.display = "none"
-  document.body.style.overflow = "scroll"
-}, 5000);
+const loaderScreen = document.querySelector<HTMLElement>("section#load");
+
+if (loaderScreen) {
+  document.body.style.overflow = "hidden";
+
+  setTimeout(() => {
+    loaderScreen.style.display = "none";
+    document.body.style.overflow = "auto";
+  }, 5000);
+}
